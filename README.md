@@ -6,6 +6,7 @@
 
 ### 컬렉션 조회
 ₩₩₩
+
 // 조회 API
 @GetMapping("/api/v2/members")
 public Result membersV2() {
@@ -17,4 +18,5 @@ public Result membersV2() {
 	return new Result(collect,collect.size());
 	// 이렇게 클래스로 감싸야 안에 형식을 바꾸는게 유연해진다.
 }
-  ₩₩₩
+	
+₩₩₩
