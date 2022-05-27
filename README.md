@@ -6,7 +6,7 @@
 
 ### 컬렉션 조회
 
-```
+```java
 @GetMapping("/api/v2/members")
 public Result membersV2() {
 	List<Member>findMembers = memberService.findMembers();
@@ -29,7 +29,7 @@ public Result membersV2() {
 이걸 N + 1(연관된 엔티티 + 자기 자신) 문제 라고 한다.
 이는 JPA의 문제라기보단 JPQL의 문제에 더 가깝다.
 
-```
+```sql
 select m from Member m left join fetch m.team
 ```
 
